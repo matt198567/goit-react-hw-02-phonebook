@@ -1,6 +1,7 @@
 import { Box } from 'components/Box';
 import { nanoid } from 'nanoid';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import PropTypes from 'prop-types';
 import * as yup from 'yup';
 
 export const ContactForm = ({ onSubmit }) => {
@@ -41,4 +42,8 @@ export const ContactForm = ({ onSubmit }) => {
       </Formik>
     </Box>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
